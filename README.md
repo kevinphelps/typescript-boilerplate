@@ -21,3 +21,18 @@ Yet another TypeScript starter.
 - `yarn run build --watch`: clean, build and watch
 - `yarn run build [--no-clean] [--no-lint] [--no-test]`: build skipping the given steps
 - `yarn run lint [--fix]`: run tslint and optionally apply an autofixes
+
+## Staying up-to-date with this starter
+
+First, run `git remote add boilerplate https://github.com/kevinphelps/typescript-boilerplate.git`.
+You only need to do this once.
+
+Now you can cherry-pick commits from this repo to your project.
+1. Run `git fetch boilerplate` to fetch boilerplate commits.
+2. Run `git cherry-pick SHA --no-commit`.
+3. Fix any conflicts and run your build and tests.
+4. Run `git commit` and update the commit message.
+Add `kevinphelps/typescript-boilerplate@SHA` to the commit message.
+
+You can run `git log --grep "kevinphelps/typescript-boilerplate"` to keep track of which commits
+from this project you have integrated into your project.
