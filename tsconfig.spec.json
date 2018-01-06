@@ -4,7 +4,8 @@
     "outDir": "./dist-spec"
   },
   "include": [
-    "./src/**/*.ts"
+    "./src/**/*.ts",
+    "./spec/**/*.ts"
   ],
   "exclude": [ ]
 }
