@@ -18,5 +18,6 @@ Yet another TypeScript starter.
 
 ## Build Commands
 - `yarn run build`: clean, lint, build, and test
-- `yarn run build [--no-clean] [--no-lint] [--no-test]`: build as above skipping the given steps
 - `yarn run build --watch`: clean, build and watch
+- `yarn run build [--no-clean] [--no-lint] [--no-test]`: build skipping the given steps
+- `yarn run lint [--fix]`: run tslint and optionally apply an autofixes
