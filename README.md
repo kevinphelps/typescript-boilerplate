@@ -20,10 +20,13 @@ Yet another TypeScript starter.
 6. Ship it! (`npm publish`)
 
 ## Build Commands
+- `yarn run lint [--fix]`: run tslint and optionally apply an autofixes
 - `yarn run build`: clean, lint, build, and test
 - `yarn run build --watch`: clean, build and watch
 - `yarn run build [--no-clean] [--no-lint] [--no-test]`: build skipping the given steps
-- `yarn run lint [--fix]`: run tslint and optionally apply an autofixes
+- `yarn run test`: run unit and e2e tests
+- `yarn run test --unit`: run unit tests
+- `yarn run test --e2e`: run e2e tests
 
 ## Staying up-to-date with this starter
 
