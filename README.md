@@ -9,12 +9,12 @@ Yet another TypeScript starter.
 - Travic CI configuration.
 
 ## Getting Started
-- Clone this repo.
-- Copy the files to your project.
-- Run `yarn --pure-lockfile` to install dependencies.
-- Replace `typescript-boilerplate` with your project name in all files (and rename files).
-- Add your code and write tests.
-- Ship it! (`npm publish`)
+1. Clone this repo.
+2. Copy the files to your project.
+3. Run `yarn --pure-lockfile` to install dependencies.
+4. Replace `typescript-boilerplate` with your project name in all files (and rename files).
+5. Add your code and write tests.
+6. Ship it! (`npm publish`)
 
 ## Build Commands
 - `yarn run build`: clean, lint, build, and test
