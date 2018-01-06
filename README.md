@@ -39,3 +39,7 @@ Add `kevinphelps/typescript-boilerplate@SHA` to the commit message.
 
 You can run `git log --grep "kevinphelps/typescript-boilerplate"` to keep track of which commits
 from this project you have integrated into your project.
+
+## Example projects using this starter
+- https://github.com/kevinphelps/nganalyzer
+- https://github.com/vintage-software/vstack-typescript-generator
