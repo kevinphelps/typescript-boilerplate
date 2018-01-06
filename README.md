@@ -1,4 +1,7 @@
 # typescript-boilerplate
+[![Build Status](https://api.travis-ci.org/kevinphelps/typescript-boilerplate.svg?branch=master)](https://travis-ci.org/kevinphelps/typescript-boilerplate)
+[![codecov](https://codecov.io/gh/kevinphelps/typescript-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/kevinphelps/typescript-boilerplate)
+
 Yet another TypeScript starter.
 
 ## Features
