@@ -21,7 +21,7 @@ bailIf(options.watch && options.test, '--watch and --test are mutually exclusive
 
 (async () => {
   if (options.clean) {
-    await execute('rimraf ./dist ./dist-spec');
+    await execute('rimraf ./dist');
   }
 
   if (options.lint) {

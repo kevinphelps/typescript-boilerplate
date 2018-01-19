@@ -14,7 +14,7 @@ const defaultOptionsFn = (args: Options) => ({
 const options = parseFlags(process.argv.slice(2), defaultOptionsFn);
 
 (async () => {
-  await execute('rimraf ./coverage');
+  await execute('rimraf ./dist-spec ./coverage');
   await execute(`tsc --project ./tsconfig.spec.json`);
 
   if (options.unit) {
