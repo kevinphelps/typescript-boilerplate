@@ -39,7 +39,7 @@ async function e2eTest() {
   await execute('ncp ./package.json ./dist-spec/package.json');
   await execute(getTestCommand('e2e', './dist-spec/src/typescript-boilerplate-cli.js', 'TEST ARGS HERE'));
   await execute(getRemapCoverageCommand('e2e'));
-  // verify that the e2e test did what you except
+  // verify that the e2e test did what you expect
 }
 
 function getTestCommand(testSet: string, script: string, args: string) {
