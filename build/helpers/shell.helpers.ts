@@ -11,18 +11,18 @@ export interface ExecuteResult {
   signal?: string;
 }
 
-export function execute(command: string, options?: SpawnOptions) {
+export function execute(command: string, options?: SpawnOptions, bailOnError = true) {
   const spawnOptions: SpawnOptions = {
     stdio: 'inherit',
     shell: true,
     ...options,
-    env: makeChildProcessEnv(options && options.env ? options.env : { })
+    env: makeChildProcessEnv(options && options.env ? options.env : {})
   };
 
-  return promisifyProcess(command, () => spawn(command, [], spawnOptions));
+  return promisifyProcess(command, () => spawn(command, [], spawnOptions), bailOnError);
 }
 
-function promisifyProcess(command: string, childProcessFn: () => ChildProcess) {
+function promisifyProcess(command: string, childProcessFn: () => ChildProcess, bailOnError: boolean) {
   return new Promise<ExecuteResult>(resolve => {
     console.log(`\n${chalk.gray(`> ${command}`)}`);
 
@@ -36,10 +36,8 @@ function promisifyProcess(command: string, childProcessFn: () => ChildProcess) {
         result.code = code;
         result.signal = signal;
 
-        if (error) {
-          bail(JSON.stringify(result.error));
-        } else if (code !== 0) {
-          bail(`'${command}' exited with code ${code}.`);
+        if (bailOnError && (error || code !== 0)) {
+          bail(error ? JSON.stringify(result.error) : `'${command}' exited with code ${code}.`);
         } else {
           resolve(result);
         }
@@ -50,8 +48,12 @@ function promisifyProcess(command: string, childProcessFn: () => ChildProcess) {
 
     const childProcess = childProcessFn();
 
-    childProcess.on('error', error => { handleResult(error); });
-    childProcess.on('exit', (code, signal) => { handleResult(undefined, code, signal); });
+    childProcess.on('error', error => {
+      handleResult(error);
+    });
+    childProcess.on('exit', (code, signal) => {
+      handleResult(undefined, code, signal);
+    });
   });
 }
 
@@ -59,10 +61,7 @@ function makeChildProcessEnv(environment: { [key: string]: string }) {
   const env = { ...process.env, ...environment };
 
   const pathKey = getPathKey();
-  const paths = [
-    ...process.env[pathKey].split(path.delimiter),
-    path.resolve('./node_modules/.bin')
-  ];
+  const paths = [...process.env[pathKey].split(path.delimiter), path.resolve('./node_modules/.bin')];
   env[pathKey] = paths.join(path.delimiter);
 
   return env;

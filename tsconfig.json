@@ -12,10 +12,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "newLine": "LF",
-    "lib": [
-      "es6",
-      "es7"
-    ],
+    "lib": ["es6", "es7"],
     "plugins": [
       {
         "name": "tslint-language-service",
@@ -23,11 +20,6 @@
       }
     ]
   },
-  "include": [
-    "./src/index.ts",
-    "./src/typescript-boilerplate-cli.ts"
-  ],
-  "exclude": [
-    "*.spec.ts"
-  ]
+  "include": ["./src/index.ts", "./src/typescript-boilerplate-cli.ts"],
+  "exclude": ["*.spec.ts"]
 }
