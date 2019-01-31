@@ -18,23 +18,23 @@
     "prepublishOnly": "yarn run build"
   },
   "dependencies": {
-    "chalk": "2.3.0",
-    "yargs": "10.0.3"
+    "chalk": "2.4.2",
+    "yargs": "12.0.5"
   },
   "devDependencies": {
-    "@types/jasmine": "2.8.3",
-    "@types/node": "8.5.2",
+    "@types/jasmine": "3.3.8",
+    "@types/node": "10.12.20",
     "@types/rimraf": "2.0.2",
-    "@types/yargs": "10.0.0",
-    "codecov": "3.0.0",
+    "@types/yargs": "12.0.8",
+    "codecov": "3.1.0",
     "istanbul": "0.4.5",
-    "jasmine": "2.8.0",
+    "jasmine": "3.3.1",
     "ncp": "2.0.0",
-    "remap-istanbul": "0.9.5",
-    "rimraf": "2.6.2",
-    "ts-node": "4.1.0",
-    "tslint": "5.8.0",
-    "tslint-consistent-codestyle": "1.11.0",
-    "typescript": "2.6.2"
+    "remap-istanbul": "0.13.0",
+    "rimraf": "2.6.3",
+    "ts-node": "8.0.2",
+    "tslint": "5.12.1",
+    "tslint-consistent-codestyle": "1.15.0",
+    "typescript": "3.2.4"
   }
 }
