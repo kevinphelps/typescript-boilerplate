@@ -19,23 +19,23 @@
   },
   "dependencies": {
     "chalk": "2.4.2",
-    "yargs": "12.0.5"
+    "yargs": "13.2.2"
   },
   "devDependencies": {
-    "@types/jasmine": "3.3.8",
-    "@types/node": "10.12.20",
+    "@types/jasmine": "3.3.12",
+    "@types/node": "11.13.8",
     "@types/rimraf": "2.0.2",
-    "@types/yargs": "12.0.8",
-    "codecov": "3.1.0",
+    "@types/yargs": "13.0.0",
+    "codecov": "3.3.0",
     "istanbul": "0.4.5",
-    "jasmine": "3.3.1",
+    "jasmine": "3.4.0",
     "ncp": "2.0.0",
-    "prettier": "1.16.2",
+    "prettier": "1.17.0",
     "remap-istanbul": "0.13.0",
     "rimraf": "2.6.3",
-    "ts-node": "8.0.2",
-    "tslint": "5.12.1",
-    "tslint-consistent-codestyle": "1.15.0",
-    "typescript": "3.2.4"
+    "ts-node": "8.1.0",
+    "tslint": "5.16.0",
+    "tslint-consistent-codestyle": "1.15.1",
+    "typescript": "3.4.5"
   }
 }
