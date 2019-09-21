@@ -23,7 +23,7 @@ export function parseFlags<T extends { [key: string]: boolean }>(args: string[],
       const key = arg.replace(/^--/, '').replace('no-', '');
       const value = arg.startsWith('--no-') === false;
 
-      options[key] = value;
+      (options as any)[key] = value;
       return options;
     },
     {} as any
